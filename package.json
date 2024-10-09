@@ -1,0 +1,27 @@
+{
+  "name": "vendease-test",
+  "version": "1.0.0",
+  "description": "Automation framework for Vendease's web and API test cases using Cypress and Cucumber, based on a coding challenge.",
+  "main": "",
+  "scripts": {
+    "cy:open:test": "npx cypress open --e2e --browser chrome",
+    "cy:run:test": "npx cypress run --e2e --browser chrome",
+    "cy:run:tag:ui": "npx cypress run --env tags=@uiTest --e2e --browser chrome",
+    "cy:run:tag:api": "npx cypress run --env tags=@apiTest --e2e --browser chrome"
+  },
+  "cypress-cucumber-preprocessor": {
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "stepDefinitions": "cypress/e2e/step_definitions/*.ts"
+  },
+  "keywords": [],
+  "author": "Blessing Nicholas",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.14.1",
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "typescript": "^5.5.4",
+    "cypress-plugin-api": "^2.11.2"
+  }
+}

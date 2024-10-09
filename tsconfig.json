@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "target": "ES6",
+    "types": ["cypress", "node"]
+  },
+  "include": ["**/*.ts"]
+}
